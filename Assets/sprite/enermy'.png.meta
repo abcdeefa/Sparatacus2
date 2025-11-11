@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: d6a8e114d25880643a1b39af4002ef93
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4710400199817234861
+    second: enermy'_0
+  - first:
+      213: 2099683492525452351
+    second: enermy'_1
+  - first:
+      213: 8771612925685914995
+    second: enermy'_2
+  - first:
+      213: -2835672613393032007
+    second: enermy'_3
+  - first:
+      213: 2915954313290448506
+    second: enermy'_4
+  - first:
+      213: 2265365874355373015
+    second: enermy'_5
+  - first:
+      213: 8990660541159568704
+    second: enermy'_6
+  - first:
+      213: -3461552528825044980
+    second: enermy'_7
+  - first:
+      213: 2459787552511047769
+    second: enermy'_8
+  - first:
+      213: 1593212319577222839
+    second: enermy'_9
+  - first:
+      213: -6400629624464261418
+    second: enermy'_10
+  - first:
+      213: 4250040158698229848
+    second: enermy'_11
+  - first:
+      213: 4727249618319795648
+    second: enermy'_12
+  - first:
+      213: 7644347414713301796
+    second: enermy'_13
+  - first:
+      213: -2414589997822930629
+    second: enermy'_14
+  - first:
+      213: 4284600509074678081
+    second: enermy'_15
+  - first:
+      213: -6786017483989918728
+    second: enermy'_16
+  - first:
+      213: -2518522584701535687
+    second: enermy'_17
+  - first:
+      213: 319728215801135401
+    second: enermy'_18
+  - first:
+      213: -8300246964458923955
+    second: enermy'_19
+  - first:
+      213: 454432379672079788
+    second: enermy'_20
+  - first:
+      213: 2885057774477025610
+    second: enermy'_21
+  - first:
+      213: -1478691984285903141
+    second: enermy'_22
+  - first:
+      213: 7494559187537729146
+    second: enermy'_23
+  - first:
+      213: 1877216887612792820
+    second: enermy'_24
+  - first:
+      213: -4060074095189439948
+    second: enermy'_25
+  - first:
+      213: -8064453008784102905
+    second: enermy'_26
+  - first:
+      213: 6406389690378833176
+    second: enermy'_27
+  - first:
+      213: -5838556560370615510
+    second: enermy'_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enermy'_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 546
+        width: 40
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da909046604be5140800000000000000
+      internalID: 4710400199817234861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 546
+        width: 41
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c2bb80303932d10800000000000000
+      internalID: 2099683492525452351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_2
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 546
+        width: 40
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ddbbe5b770bb970800000000000000
+      internalID: 8771612925685914995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_3
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 546
+        width: 40
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc976b38caa5a8d0800000000000000
+      internalID: -2835672613393032007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_4
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 546
+        width: 40
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ef1f0affc877820800000000000000
+      internalID: 2915954313290448506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_5
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 546
+        width: 40
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d38e33a242307f10800000000000000
+      internalID: 2265365874355373015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_6
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 546
+        width: 40
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 045ffeba02e35cc70800000000000000
+      internalID: 8990660541159568704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_7
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 415
+        width: 54
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c00370ca05816ffc0800000000000000
+      internalID: -3461552528825044980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_8
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 415
+        width: 55
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958395a1fbbe22220800000000000000
+      internalID: 2459787552511047769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 415
+        width: 68
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be2d28d92a3c1610800000000000000
+      internalID: 1593212319577222839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 415
+        width: 68
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de37feb4456c27a0800000000000000
+      internalID: -6400629624464261418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_11
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 415
+        width: 62
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8505a54b10d2bfa30800000000000000
+      internalID: 4250040158698229848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_12
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 415
+        width: 54
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c56d885b709a9140800000000000000
+      internalID: 4727249618319795648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_13
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 415
+        width: 54
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b79a1e87d261a60800000000000000
+      internalID: 7644347414713301796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_14
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 277
+        width: 99
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b319d85a037ad7ed0800000000000000
+      internalID: -2414589997822930629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_15
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 277
+        width: 100
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141aad35675f57b30800000000000000
+      internalID: 4284600509074678081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_16
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 277
+        width: 99
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbd03b5d0933d1a0800000000000000
+      internalID: -6786017483989918728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_17
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 277
+        width: 99
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93af01c8d096c0dd0800000000000000
+      internalID: -2518522584701535687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_18
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 277
+        width: 99
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9210f774e17ef6400800000000000000
+      internalID: 319728215801135401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_19
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 277
+        width: 99
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d485967cc599fcc80800000000000000
+      internalID: -8300246964458923955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_20
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 151
+        width: 122
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad2ac477d77e4600800000000000000
+      internalID: 454432379672079788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_21
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 151
+        width: 120
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41ae2c92c8c90820800000000000000
+      internalID: 2885057774477025610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_22
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 151
+        width: 123
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6db688971aa7be0800000000000000
+      internalID: -1478691984285903141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_23
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 151
+        width: 121
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7693598fd5020860800000000000000
+      internalID: 7494559187537729146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_24
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 151
+        width: 104
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ff568830d63d0a10800000000000000
+      internalID: 1877216887612792820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_25
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 25
+        width: 103
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ac7722f18b7a7c0800000000000000
+      internalID: -4060074095189439948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_26
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 25
+        width: 103
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ae79f37be451090800000000000000
+      internalID: -8064453008784102905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_27
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 25
+        width: 117
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81d41cb1b7118e850800000000000000
+      internalID: 6406389690378833176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enermy'_28
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 25
+        width: 119
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b351a0eb749fea0800000000000000
+      internalID: -5838556560370615510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      enermy'_0: 4710400199817234861
+      enermy'_1: 2099683492525452351
+      enermy'_10: -6400629624464261418
+      enermy'_11: 4250040158698229848
+      enermy'_12: 4727249618319795648
+      enermy'_13: 7644347414713301796
+      enermy'_14: -2414589997822930629
+      enermy'_15: 4284600509074678081
+      enermy'_16: -6786017483989918728
+      enermy'_17: -2518522584701535687
+      enermy'_18: 319728215801135401
+      enermy'_19: -8300246964458923955
+      enermy'_2: 8771612925685914995
+      enermy'_20: 454432379672079788
+      enermy'_21: 2885057774477025610
+      enermy'_22: -1478691984285903141
+      enermy'_23: 7494559187537729146
+      enermy'_24: 1877216887612792820
+      enermy'_25: -4060074095189439948
+      enermy'_26: -8064453008784102905
+      enermy'_27: 6406389690378833176
+      enermy'_28: -5838556560370615510
+      enermy'_3: -2835672613393032007
+      enermy'_4: 2915954313290448506
+      enermy'_5: 2265365874355373015
+      enermy'_6: 8990660541159568704
+      enermy'_7: -3461552528825044980
+      enermy'_8: 2459787552511047769
+      enermy'_9: 1593212319577222839
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

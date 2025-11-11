@@ -90,7 +90,7 @@ public class EnemySpawner : MonoBehaviour
         // 가시성(배경 위)에 문제 없게 간단 세팅
         var sr = e.GetComponent<SpriteRenderer>();
         if (sr != null) { sr.sortingOrder = 10; }
-        e.transform.localScale = Vector3.one * 0.6f;
+        e.transform.localScale = Vector3.one * 2.1f;
 
         alive.Add(e);
         spawned++;
