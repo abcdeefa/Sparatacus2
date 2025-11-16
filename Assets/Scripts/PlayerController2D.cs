@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerController2D : MonoBehaviour
 {
+    [Header("Movement")]
     public float moveSpeed = 3.5f;
     public float deadZone = 0.01f;
 
@@ -10,6 +11,7 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
 
+    [Header("Attack")]
     public Transform attackOrigin;
     public LayerMask enemyLayer;
 
@@ -22,9 +24,16 @@ public class PlayerController2D : MonoBehaviour
     public float hitDelay = 0.08f;
     public float attackCooldown = 0.25f;
 
+    [Header("Player Stats")]
+    public int maxHp = 100;
+    public float hitInvincibleTime = 0.3f; // 피격 후 무적 시간
+
+    int hp;
     Vector2 moveInput;
     bool isAttacking;
     bool canAttack = true;
+    bool isHit = false;
+    bool attackFacingRight = true;
 
     void Reset()
     {
@@ -33,27 +42,21 @@ public class PlayerController2D : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    void Start()
+    {
+        hp = maxHp;
+    }
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) && canAttack && !isAttacking)
+        if (hp <= 0) return;
+
+        float h = Input.GetAxisRaw("Horizontal");
+
+        // 이동 처리
+        if (!isAttacking && !isHit)
         {
-            StartCoroutine(DoAttack(rmbRange, rmbDamage, "attackHeavy"));
-            return;
-        }
-
-        if (Input.GetMouseButtonDown(0) && canAttack && !isAttacking)
-        {
-            StartCoroutine(DoAttack(lmbRange, lmbDamage, "attack"));
-            return;
-        }
-
-        if (!isAttacking)
-        {
-            float h = Input.GetAxisRaw("Horizontal");
-            float v = Input.GetAxisRaw("Vertical");
-
-            moveInput = new Vector2(h, v);
-
+            moveInput = new Vector2(h, Input.GetAxisRaw("Vertical"));
             bool isMoving = moveInput.sqrMagnitude > deadZone;
 
             if (h != 0f && spriteRenderer != null)
@@ -65,11 +68,28 @@ public class PlayerController2D : MonoBehaviour
         else
         {
             moveInput = Vector2.zero;
+            // 공격 중 방향 고정
+            if (spriteRenderer != null && isAttacking)
+                spriteRenderer.flipX = !attackFacingRight;
+        }
+
+        // 공격 입력
+        if (Input.GetMouseButtonDown(0) && canAttack && !isAttacking && !isHit)
+        {
+            attackFacingRight = h >= 0;
+            StartCoroutine(DoAttack(lmbRange, lmbDamage, "attack"));
+        }
+        else if (Input.GetMouseButtonDown(1) && canAttack && !isAttacking && !isHit)
+        {
+            attackFacingRight = h >= 0;
+            StartCoroutine(DoAttack(rmbRange, rmbDamage, "attackHeavy"));
         }
     }
 
     void FixedUpdate()
     {
+        if (hp <= 0) return;
+
         if (rb == null) return;
 
         Vector2 target = rb.position + moveInput.normalized * moveSpeed * Time.fixedDeltaTime;
@@ -104,18 +124,10 @@ public class PlayerController2D : MonoBehaviour
             if (angle > 45f) continue;
 
             var ec = h.GetComponent<EnemyController>();
-            if (ec != null)
-            {
-                ec.TakeDamage(damage);
-                continue;
-            }
+            if (ec != null) ec.TakeDamage(damage);
 
             var bc = h.GetComponent<BossController>();
-            if (bc != null)
-            {
-                bc.TakeDamage(damage);
-                continue;
-            }
+            if (bc != null) bc.TakeDamage(damage);
         }
 
         yield return new WaitForSeconds(attackCooldown);
@@ -124,44 +136,45 @@ public class PlayerController2D : MonoBehaviour
         canAttack = true;
     }
 
-    void OnDrawGizmosSelected()
+    // 플레이어 피격
+    public void TakeDamage(int dmg)
     {
-        if (spriteRenderer == null)
-            spriteRenderer = GetComponent<SpriteRenderer>();
+        if (isHit || hp <= 0) return;
 
-        Vector3 origin = attackOrigin ? attackOrigin.position : transform.position;
-        Vector2 dir = spriteRenderer && spriteRenderer.flipX ? Vector2.left : Vector2.right;
+        hp -= dmg;
+        isHit = true;
 
-        DrawFanGizmo(origin, dir, lmbRange, 90f, new Color(1, 0, 0, 0.6f));
-        DrawFanGizmo(origin, dir, rmbRange, 90f, new Color(1, 0.5f, 0, 0.4f));
+        if (animator != null)
+            animator.SetTrigger("hit");
+
+        if (hp <= 0)
+        {
+            if (animator != null)
+                animator.SetTrigger("die");
+
+            moveInput = Vector2.zero;
+            canAttack = false;
+            return;
+        }
+
+        StartCoroutine(HitInvincible());
     }
 
-    void DrawFanGizmo(Vector3 origin, Vector2 dir, float range, float angle, Color color)
+    // Hit 무적 코루틴
+    IEnumerator HitInvincible()
     {
-        Gizmos.color = color;
+        float elapsed = 0f;
+        Color original = spriteRenderer.color;
 
-        Gizmos.DrawLine(origin, origin + (Vector3)(dir * range));
-
-        Quaternion leftRot = Quaternion.Euler(0, 0, angle * 0.5f);
-        Quaternion rightRot = Quaternion.Euler(0, 0, -angle * 0.5f);
-
-        Vector2 leftDir = leftRot * dir;
-        Vector2 rightDir = rightRot * dir;
-
-        Gizmos.DrawLine(origin, origin + (Vector3)(leftDir * range));
-        Gizmos.DrawLine(origin, origin + (Vector3)(rightDir * range));
-
-        int segments = 20;
-        float step = angle / segments;
-
-        Vector2 prev = origin + (Vector3)(rightDir * range);
-        for (int i = 1; i <= segments; i++)
+        while (elapsed < hitInvincibleTime)
         {
-            Quaternion rot = Quaternion.Euler(0, 0, -angle * 0.5f + step * i);
-            Vector2 nextDir = Quaternion.Euler(0, 0, -angle * 0.5f + step * i) * dir;
-            Vector2 next = origin + (Vector3)(nextDir * range);
-            Gizmos.DrawLine(prev, next);
-            prev = next;
+            spriteRenderer.color = new Color(1f, 0.5f, 0.5f);
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.color = original;
+            yield return new WaitForSeconds(0.1f);
+            elapsed += 0.2f;
         }
+
+        isHit = false;
     }
 }

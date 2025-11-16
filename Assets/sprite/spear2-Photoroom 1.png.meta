@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 9c40b33e5968aad43a88ffe509021c53
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3877411471200766079
+    second: spear2-Photoroom_0
+  - first:
+      213: -1365565549335606766
+    second: spear2-Photoroom_1
+  - first:
+      213: -5822538305141300393
+    second: spear2-Photoroom_2
+  - first:
+      213: -8411464227861373452
+    second: spear2-Photoroom_3
+  - first:
+      213: 8393228253177252904
+    second: spear2-Photoroom_4
+  - first:
+      213: -7519824273054313130
+    second: spear2-Photoroom_5
+  - first:
+      213: -7106341913629396330
+    second: spear2-Photoroom_6
+  - first:
+      213: 1010347999216065790
+    second: spear2-Photoroom_7
+  - first:
+      213: -4598696171598018667
+    second: spear2-Photoroom_8
+  - first:
+      213: -4197439310581307689
+    second: spear2-Photoroom_9
+  - first:
+      213: -3510351380931281662
+    second: spear2-Photoroom_10
+  - first:
+      213: -2465651681043761201
+    second: spear2-Photoroom_11
+  - first:
+      213: -1117925424423599701
+    second: spear2-Photoroom_12
+  - first:
+      213: 9062699755342091824
+    second: spear2-Photoroom_13
+  - first:
+      213: -2675205956584519063
+    second: spear2-Photoroom_14
+  - first:
+      213: 5662116413986455138
+    second: spear2-Photoroom_15
+  - first:
+      213: -8685704375843967104
+    second: spear2-Photoroom_16
+  - first:
+      213: -1598375515524713140
+    second: spear2-Photoroom_17
+  - first:
+      213: 3691877800459243857
+    second: spear2-Photoroom_18
+  - first:
+      213: -1555060115064758229
+    second: spear2-Photoroom_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spear2-Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 102
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187bd037fcaa03ac0800000000000000
+      internalID: -3877411471200766079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 560
+        width: 103
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a07523e598c0de0800000000000000
+      internalID: -1365565549335606766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 560
+        width: 119
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 753a2f6b240323fa0800000000000000
+      internalID: -5822538305141300393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 560
+        width: 120
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fdda61c9d9744b80800000000000000
+      internalID: -8411464227861373452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 429
+        width: 43
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c076580acba7470800000000000000
+      internalID: 8393228253177252904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 429
+        width: 39
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655dc375aa734a790800000000000000
+      internalID: -7519824273054313130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 291
+        width: 83
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69276a93ea3316d90800000000000000
+      internalID: -7106341913629396330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 291
+        width: 111
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efcdcc8f62a750e00800000000000000
+      internalID: 1010347999216065790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 291
+        width: 101
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59783f562362e20c0800000000000000
+      internalID: -4598696171598018667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 291
+        width: 103
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d66a8e9f23bfb5c0800000000000000
+      internalID: -4197439310581307689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 291
+        width: 121
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20df9c6840ab84fc0800000000000000
+      internalID: -3510351380931281662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 291
+        width: 53
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7ba831cde38cdd0800000000000000
+      internalID: -2465651681043761201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 165
+        width: 54
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba18adfdfb45c70f0800000000000000
+      internalID: -1117925424423599701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 165
+        width: 45
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0365f27496d25cd70800000000000000
+      internalID: 9062699755342091824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 165
+        width: 40
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a45c83b52cfdad0800000000000000
+      internalID: -2675205956584519063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 39
+        width: 54
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26e329c11e0e39e40800000000000000
+      internalID: 5662116413986455138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 39
+        width: 47
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fa3c593ed267780800000000000000
+      internalID: -8685704375843967104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 39
+        width: 62
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45b77befed61d9e0800000000000000
+      internalID: -1598375515524713140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 39
+        width: 78
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15116829c4f2c3330800000000000000
+      internalID: 3691877800459243857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spear2-Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 39
+        width: 81
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20ef2d70115b6ae0800000000000000
+      internalID: -1555060115064758229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spear2-Photoroom_0: -3877411471200766079
+      spear2-Photoroom_1: -1365565549335606766
+      spear2-Photoroom_10: -3510351380931281662
+      spear2-Photoroom_11: -2465651681043761201
+      spear2-Photoroom_12: -1117925424423599701
+      spear2-Photoroom_13: 9062699755342091824
+      spear2-Photoroom_14: -2675205956584519063
+      spear2-Photoroom_15: 5662116413986455138
+      spear2-Photoroom_16: -8685704375843967104
+      spear2-Photoroom_17: -1598375515524713140
+      spear2-Photoroom_18: 3691877800459243857
+      spear2-Photoroom_19: -1555060115064758229
+      spear2-Photoroom_2: -5822538305141300393
+      spear2-Photoroom_3: -8411464227861373452
+      spear2-Photoroom_4: 8393228253177252904
+      spear2-Photoroom_5: -7519824273054313130
+      spear2-Photoroom_6: -7106341913629396330
+      spear2-Photoroom_7: 1010347999216065790
+      spear2-Photoroom_8: -4598696171598018667
+      spear2-Photoroom_9: -4197439310581307689
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
