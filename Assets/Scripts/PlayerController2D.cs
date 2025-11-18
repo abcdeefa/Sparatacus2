@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PlayerController2D : MonoBehaviour
 {
-    [Header("Movement")]
     public float moveSpeed = 3.5f;
     public float deadZone = 0.01f;
 
@@ -11,7 +10,6 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    [Header("Attack")]
     public Transform attackOrigin;
     public LayerMask enemyLayer;
 
@@ -24,9 +22,11 @@ public class PlayerController2D : MonoBehaviour
     public float hitDelay = 0.08f;
     public float attackCooldown = 0.25f;
 
-    [Header("Player Stats")]
     public int maxHp = 100;
-    public float hitInvincibleTime = 0.3f; // 피격 후 무적 시간
+    public float hitInvincibleTime = 0.3f;
+
+    public bool showAttackRange = true;
+    public Color attackColor = new Color(1f, 0f, 0f, 0.5f);
 
     int hp;
     Vector2 moveInput;
@@ -53,7 +53,6 @@ public class PlayerController2D : MonoBehaviour
 
         float h = Input.GetAxisRaw("Horizontal");
 
-        // 이동 처리
         if (!isAttacking && !isHit)
         {
             moveInput = new Vector2(h, Input.GetAxisRaw("Vertical"));
@@ -68,30 +67,25 @@ public class PlayerController2D : MonoBehaviour
         else
         {
             moveInput = Vector2.zero;
-            // 공격 중 방향 고정
             if (spriteRenderer != null && isAttacking)
                 spriteRenderer.flipX = !attackFacingRight;
         }
 
-        // 공격 입력
         if (Input.GetMouseButtonDown(0) && canAttack && !isAttacking && !isHit)
         {
-            attackFacingRight = h >= 0;
+            attackFacingRight = !spriteRenderer.flipX;
             StartCoroutine(DoAttack(lmbRange, lmbDamage, "attack"));
         }
         else if (Input.GetMouseButtonDown(1) && canAttack && !isAttacking && !isHit)
         {
-            attackFacingRight = h >= 0;
+            attackFacingRight = !spriteRenderer.flipX;
             StartCoroutine(DoAttack(rmbRange, rmbDamage, "attackHeavy"));
         }
     }
 
     void FixedUpdate()
     {
-        if (hp <= 0) return;
-
-        if (rb == null) return;
-
+        if (hp <= 0 || rb == null) return;
         Vector2 target = rb.position + moveInput.normalized * moveSpeed * Time.fixedDeltaTime;
         rb.MovePosition(target);
     }
@@ -110,8 +104,7 @@ public class PlayerController2D : MonoBehaviour
             animator.SetTrigger(animTrigger);
 
         Vector3 origin = attackOrigin ? attackOrigin.position : transform.position;
-        Vector2 dir = spriteRenderer && spriteRenderer.flipX ? Vector2.left : Vector2.right;
-
+        Vector2 dir = attackFacingRight ? Vector2.right : Vector2.left;
         Vector2 center = (Vector2)origin + dir * (range * 0.6f);
 
         yield return new WaitForSeconds(hitDelay);
@@ -136,7 +129,6 @@ public class PlayerController2D : MonoBehaviour
         canAttack = true;
     }
 
-    // 플레이어 피격
     public void TakeDamage(int dmg)
     {
         if (isHit || hp <= 0) return;
@@ -160,7 +152,6 @@ public class PlayerController2D : MonoBehaviour
         StartCoroutine(HitInvincible());
     }
 
-    // Hit 무적 코루틴
     IEnumerator HitInvincible()
     {
         float elapsed = 0f;
@@ -170,11 +161,64 @@ public class PlayerController2D : MonoBehaviour
         {
             spriteRenderer.color = new Color(1f, 0.5f, 0.5f);
             yield return new WaitForSeconds(0.1f);
+
             spriteRenderer.color = original;
             yield return new WaitForSeconds(0.1f);
+
             elapsed += 0.2f;
         }
 
         isHit = false;
+    }
+
+    void OnDrawGizmos()
+    {
+        if (!showAttackRange || attackOrigin == null) return;
+
+        Gizmos.color = attackColor;
+        Vector2 dir = attackFacingRight ? Vector2.right : Vector2.left;
+
+        Vector2 lmbCenter = (Vector2)attackOrigin.position + dir * (lmbRange * 0.6f);
+        Gizmos.DrawWireSphere(lmbCenter, lmbRange);
+
+        Vector2 rmbCenter = (Vector2)attackOrigin.position + dir * (rmbRange * 0.6f);
+        Gizmos.DrawWireSphere(rmbCenter, rmbRange);
+    }
+
+    void OnRenderObject()
+    {
+        if (!showAttackRange || attackOrigin == null) return;
+
+        Material mat = new Material(Shader.Find("Sprites/Default"));
+        mat.SetPass(0);
+
+        GL.PushMatrix();
+        GL.MultMatrix(Matrix4x4.identity);
+
+        GL.Begin(GL.LINE_STRIP);
+        GL.Color(attackColor);
+        int segments = 30;
+
+        Vector2 dir = attackFacingRight ? Vector2.right : Vector2.left;
+        Vector2 lmbCenter = (Vector2)attackOrigin.position + dir * (lmbRange * 0.6f);
+        for (int i = 0; i <= segments; i++)
+        {
+            float angle = i * 2 * Mathf.PI / segments;
+            float x = Mathf.Cos(angle) * lmbRange + lmbCenter.x;
+            float y = Mathf.Sin(angle) * lmbRange + lmbCenter.y;
+            GL.Vertex3(x, y, 0);
+        }
+
+        Vector2 rmbCenter = (Vector2)attackOrigin.position + dir * (rmbRange * 0.6f);
+        for (int i = 0; i <= segments; i++)
+        {
+            float angle = i * 2 * Mathf.PI / segments;
+            float x = Mathf.Cos(angle) * rmbRange + rmbCenter.x;
+            float y = Mathf.Sin(angle) * rmbRange + rmbCenter.y;
+            GL.Vertex3(x, y, 0);
+        }
+
+        GL.End();
+        GL.PopMatrix();
     }
 }
