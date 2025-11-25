@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class PlayerController2D : MonoBehaviour
 {
     public float moveSpeed = 3.5f;
     public float deadZone = 0.01f;
 
+    public int CurrentHp => hp;
     [SerializeField] Rigidbody2D rb;
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
