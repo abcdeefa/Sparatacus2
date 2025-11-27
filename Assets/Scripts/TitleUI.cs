@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 public class TitleUI : MonoBehaviour
 {
     [Header("Refs")]
-    public RectTransform titleRect;     // 상단 제목 Rect
-    public Button startButton;          // START 버튼
-    public RectTransform startRect;     // START 버튼 Rect(펄스용)
+    public RectTransform titleRect;
+    public Button startButton;
+    public RectTransform startRect;
 
     [Header("Pulse")]
     public float pulseSpeed = 3.5f;
@@ -16,9 +16,14 @@ public class TitleUI : MonoBehaviour
 
     void Start()
     {
+        if (startButton == null)
+            startButton = GetComponentInChildren<Button>();
+        if (startRect == null && startButton != null)
+            startRect = startButton.GetComponent<RectTransform>();
+
         if (startButton != null)
             startButton.onClick.AddListener(() =>
-                SceneManager.LoadScene("CharacterSelectScene")); // 다음 씬 이름
+                SceneManager.LoadScene("CharacterSelectScene"));
     }
 
     void Update()
@@ -29,3 +34,4 @@ public class TitleUI : MonoBehaviour
         startRect.localScale = new Vector3(s, s, 1f);
     }
 }
+

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class EnemyController : MonoBehaviour
@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
 
     int hp;
     bool canAttack = true;
+    bool isDead;
 
     Transform target;
     EnemySpawner spawner;
@@ -21,14 +22,21 @@ public class EnemyController : MonoBehaviour
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>(); // ⭐ Animator 연결
+        animator = GetComponent<Animator>();
         spawner = Object.FindFirstObjectByType<EnemySpawner>();
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        if (enemyLayer >= 0)
+            gameObject.layer = enemyLayer;
     }
 
     void Start()
     {
         hp = maxHp;
+        FindPlayer();
+    }
 
+    void FindPlayer()
+    {
         GameObject playerGo = GameObject.FindGameObjectWithTag("Player");
         if (playerGo != null)
             target = playerGo.transform;
@@ -38,22 +46,31 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (hp <= 0 || target == null) return;
+        if (isDead) return;
+        if (target == null)
+        {
+            FindPlayer();
+            if (target == null) return;
+        }
 
         float dist = Vector2.Distance(transform.position, target.position);
-
-        // 공격 범위 안 → 공격
-        if (dist <= attackRange)
+        var player = target.GetComponent<PlayerController2D>();
+        if (player != null && player.CurrentHp <= 0)
         {
-            animator.SetBool("isMoving", false);
-
-            if (canAttack)
-                StartCoroutine(DoAttack());
+            animator?.SetBool("isMoving", false);
             return;
         }
 
-        // 이동
-        animator.SetBool("isMoving", true);
+        if (dist <= attackRange)
+        {
+            animator?.SetBool("isMoving", false);
+
+            if (canAttack)
+                StartCoroutine(DoAttack(player));
+            return;
+        }
+
+        animator?.SetBool("isMoving", true);
 
         transform.position = Vector2.MoveTowards(
             transform.position,
@@ -61,27 +78,24 @@ public class EnemyController : MonoBehaviour
             speed * Time.deltaTime
         );
 
-        // 방향 전환
-        if (target.position.x < transform.position.x)
-            sr.flipX = true;
-        else
-            sr.flipX = false;
+        if (sr != null)
+        {
+            if (target.position.x < transform.position.x)
+                sr.flipX = true;
+            else
+                sr.flipX = false;
+        }
     }
 
-    // -----------------------------------------
-    // 공격
-    // -----------------------------------------
-    IEnumerator DoAttack()
+    IEnumerator DoAttack(PlayerController2D cachedPlayer)
     {
         canAttack = false;
 
-        // ⭐ 공격 애니메이션 트리거
-        animator.SetTrigger("attack");
+        animator?.SetTrigger("attack");
 
-        yield return new WaitForSeconds(0.15f); // 타격 타이밍(애니에 따라 조절)
+        yield return new WaitForSeconds(0.15f);
 
-        // 데미지 적용
-        var player = target.GetComponent<PlayerController2D>();
+        var player = cachedPlayer != null ? cachedPlayer : target.GetComponent<PlayerController2D>();
         if (player != null)
             player.TakeDamage(damage);
 
@@ -90,15 +104,12 @@ public class EnemyController : MonoBehaviour
         canAttack = true;
     }
 
-    // -----------------------------------------
-    // 피격
-    // -----------------------------------------
     public void TakeDamage(int dmg)
     {
+        if (isDead) return;
         hp -= Mathf.Max(1, dmg);
 
-        // ⭐ Hit 애니메이션 재생
-        animator.SetTrigger("hit");
+        animator?.SetTrigger("hit");
 
         if (sr != null)
             StartCoroutine(Flash());
@@ -119,28 +130,24 @@ public class EnemyController : MonoBehaviour
         sr.color = orig;
     }
 
-    // -----------------------------------------
-    // 사망
-    // -----------------------------------------
     void Die()
     {
-        animator.SetTrigger("die");  // ⭐ Death 애니 재생
-        animator.SetBool("isMoving", false);
+        if (isDead) return;
+        isDead = true;
+        animator?.SetTrigger("die");
+        animator?.SetBool("isMoving", false);
         canAttack = false;
 
-        // EnemySpawner 카운트 처리
         if (spawner != null)
             spawner.OnEnemyKilled(gameObject);
 
-        // 애니메이션 재생 끝나고 삭제
         StartCoroutine(DeathRoutine());
     }
 
     IEnumerator DeathRoutine()
     {
-        yield return new WaitForSeconds(0.5f); // death 애니 길이에 맞춰 조절
+        yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
 }
-
 
